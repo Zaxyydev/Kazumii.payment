@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazumii Secure Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-x-hidden">  <!-- AUDIO CLICK -->  <audio id="clickSound" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" type="audio/mpeg">
+  </audio>  <!-- HERO / SAMBUTAN -->  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 animate-fadeIn">
+    <div class="max-w-xl"><!-- FOTO PROFIL + VERIFIED -->
+  <div class="flex flex-col items-center mb-6">
+    <div class="relative">
+      <img src="https://aliceecdn.vercel.app/file/710fea7231.jpeg" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-indigo-500 shadow-2xl" />
+      <span class="absolute bottom-2 right-2 bg-blue-500 rounded-full p-1 border-2 border-slate-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-7.364 7.364a1 1 0 01-1.414 0L3.293 9.121a1 1 0 011.414-1.414l3.222 3.222 6.657-6.636a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+      </span>
+    </div>
+    <h1 class="mt-4 text-3xl font-extrabold flex items-center gap-2">Kazumii Payment <span class="text-blue-400">✔</span></h1>
+    <p class="text-sm text-white/70">Official & Verified Payment</p>
+  </div>
+
+  <p class="text-lg text-white/80 mb-8">
+    Selamat datang di <b>website pembayaran resmi</b>. Sistem ini dibuat untuk memastikan transaksi kamu
+    <b>aman, cepat, dan terpercaya</b>.
+  </p>
+
+  <!-- BADGE -->
+  <div class="flex justify-center gap-4 mb-10">
+    <div class="px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm">🔒 Aman</div>
+    <div class="px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm">⚡ Cepat</div>
+    <div class="px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm">✅ Terpercaya</div>
+  </div>
+
+  <!-- BUTTON -->
+  <div class="flex flex-col gap-4 items-center">
+    <button onclick="goPayment(); playSound();" class="group relative inline-flex items-center justify-center px-12 py-4 font-bold text-lg rounded-full overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 shadow-2xl hover:scale-105 active:scale-95 transition">
+      <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition"></span>
+      <span class="relative flex items-center gap-2">
+        Lanjut ke Pembayaran
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:translate-x-1 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+      </span>
+    </button>
+
+    <a onclick="playSound()" href="https://wa.me/6285189262321" target="_blank"
+      class="px-8 py-3 rounded-full bg-white/10 backdrop-blur hover:bg-white/20 transition">
+      💬 Hubungi Admin
+    </a>
+  </div>
+
+</div>
+
+  </section>  <!-- PAYMENT -->  <section id="payment" class="min-h-screen flex items-center justify-center p-4">
+    <div class="relative max-w-md w-full bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] p-6 text-gray-800"><button id="helpBtn" onclick="playSound()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-indigo-600 text-white text-lg font-bold">?</button>
+
+  <h2 class="text-3xl font-extrabold text-center">Payment</h2>
+  <p class="text-center text-gray-500 mb-6">Fast • Secure • Simple</p>
+
+  <!-- DANA -->
+  <div class="rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 p-5 text-white shadow-xl">
+    <div class="flex items-center justify-between">
+      <h3 class="text-xl font-bold">DANA</h3>
+      <img src="https://files.catbox.moe/r6vp2e.jpg" class="h-10 rounded-md" />
+    </div>
+
+    <button id="copyDana" onclick="playSound()" class="mt-4 w-full rounded-xl bg-white/95 text-blue-700 py-3 font-mono text-lg tracking-wider shadow">
+      087779593017
+    </button>
+
+    <p class="text-center text-xs mt-2 opacity-80">a.n Dedexxx</p>
+  </div>
+
+  <!-- QRIS -->
+  <div class="mt-5 rounded-2xl bg-gradient-to-br from-emerald-600 to-green-500 p-5 text-white shadow-xl">
+    <h3 class="text-xl font-bold mb-3">QRIS</h3>
+    <div class="bg-white rounded-xl p-4 flex justify-center">
+      <img src="https://aliceecdn.vercel.app/file/023786bff9.jpeg" class="rounded-lg w-52" />
+    </div>
+  </div>
+
+  <a onclick="playSound()" href="https://wa.me/6285189262321?text=Halo syang,%20saya%20sudah%20melakukan%20pembayaran" target="_blank"
+    class="block mt-6 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-4 font-bold text-lg shadow-lg">
+     Saya Sudah Bayar
+  </a>
+</div>
+
+  </section>  <!-- GUIDE -->  <div id="guideModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-gray-800">
+      <h3 class="text-xl font-bold mb-4">Panduan Pembayaran</h3>
+      <ul class="space-y-3 text-sm">
+        <li>1. Pilih metode pembayaran</li>
+        <li>2. Lakukan pembayaran</li>
+        <li>3. Klik tombol Sudah Bayar</li>
+        <li>4. Kirim bukti transfer</li>
+      </ul>
+      <button id="closeGuide" onclick="playSound()" class="mt-5 w-full rounded-xl bg-indigo-600 text-white py-3 font-semibold">Mengerti</button>
+    </div>
+  </div>  <style>
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s ease-out; }
+  </style>  <script>
+    function playSound(){ document.getElementById('clickSound').play(); }
+    function goPayment(){ document.getElementById('payment').scrollIntoView({behavior:'smooth'}); }
+
+    const danaBtn = document.getElementById('copyDana');
+    danaBtn.addEventListener('click', ()=>{
+      navigator.clipboard.writeText(danaBtn.innerText);
+      danaBtn.innerText = '✓ Nomor Disalin';
+      setTimeout(()=>danaBtn.innerText='08xx-xxxx-xxxx',1500);
+    });
+
+    const helpBtn = document.getElementById('helpBtn');
+    const modal = document.getElementById('guideModal');
+    const closeGuide = document.getElementById('closeGuide');
+    helpBtn.onclick = ()=> modal.classList.remove('hidden');
+    closeGuide.onclick = ()=> modal.classList.add('hidden');
+  </script></body>
+</html>
